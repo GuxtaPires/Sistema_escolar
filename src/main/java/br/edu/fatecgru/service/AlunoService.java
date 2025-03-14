@@ -29,4 +29,12 @@ public class AlunoService {
 	public List<Aluno> getByPrimeiroNome(String nome) {
 		return alunoRepository.findByNomeStartsWith(nome);
 	}
+	
+	public Aluno saveAluno(Aluno aluno) {
+		return alunoRepository.save(aluno);
+	}
+	
+	public void deleteAluno(int id) {
+		alunoRepository.deleteById(id);
+	}
 }
